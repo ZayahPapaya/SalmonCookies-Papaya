@@ -1,17 +1,242 @@
 'use strict';
+//link repository and deploy text
 
-let hour = ['6.am', '7.am'];
+// DONE Stores the min/max hourly customers, and the average cookies per customer, in object properties
 
-let  seattleObject = {
+// DONE Uses a method of that object to generate a random number of customers per hour. Objects/Math/random
+
+// DONE Calculate and store the simulated amounts of cookies purchased for each hour at each location using average cookies purchased and the random number of customers generated
+
+// DONE Store the results for each location in a separate array… perhaps as a property of the object representing that location
+
+// DONE Display the values of each array as unordered lists in the browser
+
+// DONE Calculating the sum of these hourly totals; your output for each location should look like this:
+let hour = ['6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19'];
+const storeList = document.getElementById('seattle');
+
+let seattleObject = {
   name: 'Seattle',
   min: 23,
   max: 65,
   avg: 6.3,
   dailyTotal: 0,
-  avgCookiesSoldEachHourArray:0,
-  getRandomCustomers: function(){
-    return Math.floor(Math.random)
-  }
-};
+  avgCPH: [],
 
-console.log(seattleObject.getRandomCustomers);
+  getRandomCustomers: function () { // + Random number of customers function
+    return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
+  },
+
+  perCust: function () { // + Customer # * average sales for expected cookies sold
+    return Math.round(this.getRandomCustomers() * this.avg);
+  },
+
+  saleAlg: function () { // Push cookie sales to array for every hour
+    for (let i = 0; i < hour.length; i++) {
+      let customerThisHour = this.perCust();
+      this.avgCPH.push(customerThisHour);
+      // console.log(customerThisHour);
+    }// something wrong up here
+    return this.customerThisHour;
+  },
+
+  cookiesTotal: function () { // total sales rounded
+    let daily = Math.round(this.avgCPH.reduce((a, b) => a + b));
+    this.dailyTotal = daily;
+    return this.dailyTotal;
+  },
+
+  render: function () {
+    let ul = document.createElement('ul');
+    this.saleAlg();
+    this.cookiesTotal();
+    storeList.appendChild(ul);
+    for (let i = 0; i < this.avgCPH.length; i++) {
+      let li = document.createElement('li');
+      li.textContent = `${hour[i]}:00 ${this.avgCPH[i]}`;
+      ul.appendChild(li);
+    }
+  },
+
+};
+seattleObject.render();
+
+let tokyoObject = {
+  name: 'Tokyo',
+  min: 3,
+  max: 24,
+  avg: 1.2,
+  dailyTotal: 0,
+  avgCPH: [],
+
+  getRandomCustomers: function () { // + Random number of customers function
+    return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
+  },
+
+  perCust: function () { // + Customer # * average sales for expected cookies sold
+    return Math.round(this.getRandomCustomers() * this.avg);
+  },
+
+  saleAlg: function () { // Push cookie sales to array for every hour
+    for (let i = 0; i < hour.length; i++) {
+      let customerThisHour = this.perCust();
+      this.avgCPH.push(customerThisHour);
+      // console.log(customerThisHour);
+    }// something wrong up here
+    return this.customerThisHour;
+  },
+
+  cookiesTotal: function () { // total sales rounded
+    let daily = Math.round(this.avgCPH.reduce((a, b) => a + b));
+    this.dailyTotal = daily;
+    return this.dailyTotal;
+  },
+
+  render: function () {
+    let ul = document.createElement('ul');
+    this.saleAlg();
+    this.cookiesTotal();
+    storeList.appendChild(ul);
+    for (let i = 0; i < this.avgCPH.length; i++) {
+      let li = document.createElement('li');
+      li.textContent = `${hour[i]}:00 ${this.avgCPH[i]}`;
+      ul.appendChild(li);
+    }
+  },
+};
+tokyoObject.render();
+
+let dubaiObject = {
+  name: 'Dubai',
+  min: 11,
+  max: 38,
+  avg: 3.7,
+  dailyTotal: 0,
+  avgCPH: [],
+
+  getRandomCustomers: function () { // + Random number of customers function
+    return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
+  },
+
+  perCust: function () { // + Customer # * average sales for expected cookies sold
+    return Math.round(this.getRandomCustomers() * this.avg);
+  },
+
+  saleAlg: function () { // Push cookie sales to array for every hour
+    for (let i = 0; i < hour.length; i++) {
+      let customerThisHour = this.perCust();
+      this.avgCPH.push(customerThisHour);
+      // console.log(customerThisHour);
+    }// something wrong up here
+    return this.customerThisHour;
+  },
+
+  cookiesTotal: function () { // total sales rounded
+    let daily = Math.round(this.avgCPH.reduce((a, b) => a + b));
+    this.dailyTotal = daily;
+    return this.dailyTotal;
+  },
+
+  render: function () {
+    let ul = document.createElement('ul');
+    this.saleAlg();
+    this.cookiesTotal();
+    storeList.appendChild(ul);
+    for (let i = 0; i < this.avgCPH.length; i++) {
+      let li = document.createElement('li');
+      li.textContent = `${hour[i]}:00 ${this.avgCPH[i]}`;
+      ul.appendChild(li);
+    }
+  },
+};
+dubaiObject.render();
+
+let parisObject = {
+  name: 'Paris',
+  min: 20,
+  max: 38,
+  avg: 2.3,
+  dailyTotal: 0,
+  avgCPH: [],
+
+  getRandomCustomers: function () { // + Random number of customers function
+    return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
+  },
+
+  perCust: function () { // + Customer # * average sales for expected cookies sold
+    return Math.round(this.getRandomCustomers() * this.avg);
+  },
+
+  saleAlg: function () { // Push cookie sales to array for every hour
+    for (let i = 0; i < hour.length; i++) {
+      let customerThisHour = this.perCust();
+      this.avgCPH.push(customerThisHour);
+      // console.log(customerThisHour);
+    }// something wrong up here
+    return this.customerThisHour;
+  },
+
+  cookiesTotal: function () { // total sales rounded
+    let daily = Math.round(this.avgCPH.reduce((a, b) => a + b));
+    this.dailyTotal = daily;
+    return this.dailyTotal;
+  },
+
+  render: function () {
+    let ul = document.createElement('ul');
+    this.saleAlg();
+    this.cookiesTotal();
+    storeList.appendChild(ul);
+    for (let i = 0; i < this.avgCPH.length; i++) {
+      let li = document.createElement('li');
+      li.textContent = `${hour[i]}:00 ${this.avgCPH[i]}`;
+      ul.appendChild(li);
+    }
+  },
+};
+parisObject.render();
+
+let limaObject = {
+  name: 'Lima',
+  min: 2,
+  max: 16,
+  avg: 4.6,
+  dailyTotal: 0,
+  avgCPH: [],
+
+  getRandomCustomers: function () { // + Random number of customers function
+    return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
+  },
+
+  perCust: function () { // + Customer # * average sales for expected cookies sold
+    return Math.round(this.getRandomCustomers() * this.avg);
+  },
+
+  saleAlg: function () { // Push cookie sales to array for every hour
+    for (let i = 0; i < hour.length; i++) {
+      let customerThisHour = this.perCust();
+      this.avgCPH.push(customerThisHour);
+      // console.log(customerThisHour);
+    }// something wrong up here
+    return this.customerThisHour;
+  },
+
+  cookiesTotal: function () { // total sales rounded
+    let daily = Math.round(this.avgCPH.reduce((a, b) => a + b));
+    this.dailyTotal = daily;
+    return this.dailyTotal;
+  },
+
+  render: function () {
+    let ul = document.createElement('ul');
+    this.saleAlg();
+    this.cookiesTotal();
+    storeList.appendChild(ul);
+    for (let i = 0; i < this.avgCPH.length; i++) {
+      let li = document.createElement('li');
+      li.textContent = `${hour[i]}:00 ${this.avgCPH[i]}`;
+      ul.appendChild(li);
+    }
+  },
+};
+limaObject.render();
