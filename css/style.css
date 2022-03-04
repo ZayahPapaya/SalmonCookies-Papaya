@@ -1,0 +1,7 @@
+ul {
+margin: 20px;
+list-style: disc;
+}
+* {
+  width: fit-content;
+}

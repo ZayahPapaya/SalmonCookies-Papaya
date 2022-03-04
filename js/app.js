@@ -51,11 +51,17 @@ let seattleObject = {
     this.saleAlg();
     this.cookiesTotal();
     storeList.appendChild(ul);
+    let topper = document.createElement('h3');
+    topper.textContent = `${this.name}`;
+    ul.appendChild(topper);
     for (let i = 0; i < this.avgCPH.length; i++) {
       let li = document.createElement('li');
       li.textContent = `${hour[i]}:00 ${this.avgCPH[i]}`;
       ul.appendChild(li);
     }
+    let totalPrint = document.createElement('p');
+    totalPrint.textContent = `Total: ${this.dailyTotal}`;
+    ul.appendChild(totalPrint);
   },
 
 };
@@ -97,11 +103,17 @@ let tokyoObject = {
     this.saleAlg();
     this.cookiesTotal();
     storeList.appendChild(ul);
+    let topper = document.createElement('h3');
+    topper.textContent = `${this.name}`;
+    ul.appendChild(topper);
     for (let i = 0; i < this.avgCPH.length; i++) {
       let li = document.createElement('li');
       li.textContent = `${hour[i]}:00 ${this.avgCPH[i]}`;
       ul.appendChild(li);
     }
+    let totalPrint = document.createElement('p');
+    totalPrint.textContent = `Total: ${this.dailyTotal}`;
+    ul.appendChild(totalPrint);
   },
 };
 tokyoObject.render();
@@ -142,11 +154,17 @@ let dubaiObject = {
     this.saleAlg();
     this.cookiesTotal();
     storeList.appendChild(ul);
+    let topper = document.createElement('h3');
+    topper.textContent = `${this.name}`;
+    ul.appendChild(topper);
     for (let i = 0; i < this.avgCPH.length; i++) {
       let li = document.createElement('li');
       li.textContent = `${hour[i]}:00 ${this.avgCPH[i]}`;
       ul.appendChild(li);
     }
+    let totalPrint = document.createElement('p');
+    totalPrint.textContent = `Total: ${this.dailyTotal}`;
+    ul.appendChild(totalPrint);
   },
 };
 dubaiObject.render();
@@ -187,11 +205,17 @@ let parisObject = {
     this.saleAlg();
     this.cookiesTotal();
     storeList.appendChild(ul);
+    let topper = document.createElement('h3');
+    topper.textContent = `${this.name}`;
+    ul.appendChild(topper);
     for (let i = 0; i < this.avgCPH.length; i++) {
       let li = document.createElement('li');
       li.textContent = `${hour[i]}:00 ${this.avgCPH[i]}`;
       ul.appendChild(li);
     }
+    let totalPrint = document.createElement('p');
+    totalPrint.textContent = `Total: ${this.dailyTotal}`;
+    ul.appendChild(totalPrint);
   },
 };
 parisObject.render();
@@ -232,11 +256,17 @@ let limaObject = {
     this.saleAlg();
     this.cookiesTotal();
     storeList.appendChild(ul);
+    let topper = document.createElement('h3');
+    topper.textContent = `${this.name}`;
+    ul.appendChild(topper);
     for (let i = 0; i < this.avgCPH.length; i++) {
       let li = document.createElement('li');
       li.textContent = `${hour[i]}:00 ${this.avgCPH[i]}`;
       ul.appendChild(li);
     }
+    let totalPrint = document.createElement('p');
+    totalPrint.textContent = `Total: ${this.dailyTotal}`;
+    ul.appendChild(totalPrint);
   },
 };
 limaObject.render();
