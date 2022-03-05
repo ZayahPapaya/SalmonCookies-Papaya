@@ -14,6 +14,7 @@
 // DONE Calculating the sum of these hourly totals; your output for each location should look like this:
 let hour = ['6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19'];
 const storeList = document.getElementById('seattle');
+const storeTable = document.getElementById('table');
 
 let seattleObject = {
   name: 'Seattle',
@@ -270,3 +271,33 @@ let limaObject = {
   },
 };
 limaObject.render();
+
+function Store(location, totalSales) {
+  this.location = location;
+  this.totalSales = totalSales;
+}
+Store.prototype.render = function () {
+  let row = document.createElement('tr');
+  storeTable.appendChild(row);
+
+  let tdFirst = document.createElement('td');
+  let tdSecond = document.createElement('td');
+  let tdThird = document.createElement('td');
+
+  row.appendChild(tdFirst);
+  row.appendChild(tdSecond);
+  row.appendChild(tdThird);
+
+  tdFirst.textContent = this.location;
+  tdSecond.textContent = this.totalSales;
+  tdThird.textContent = this.something;
+};
+let storeArray = [
+  new Store('Seattle', '3000'),
+  new Store('Tokyo', '2000'),
+  new Store('Israel', '1000'),
+];
+for (let i = 0; i < storeArray.length; i++) {
+  let tick = storeArray[i];
+  tick.render();
+}

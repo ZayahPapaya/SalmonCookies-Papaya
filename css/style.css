@@ -1,7 +1,22 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+
 ul {
 margin: 20px;
 list-style: disc;
 }
-* {
-  width: fit-content;
+
+table {
+  border-spacing: -1px;
+  width: 300px;
+}
+
+table td, table th {
+  border: thin black solid;
+  padding: 3px;
+}
+td:first-of-type{
+  text-align: center;
 }
