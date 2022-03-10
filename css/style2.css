@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+header {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+h1 {
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+}
+#chinook{
+  z-index: 1;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  transform: scale(80%);
+}
+p#chinook{
+  color: pink;
+  font-size: 50px;
+  text-align: center;
+  margin: 80px 180px 80px 80px;
+}
+a:visited{
+  color: pink;
+  text-decoration: none;
+}
+
+p {
+  font-size: 20px;
+}
+main {
+  width: 960px;
+  margin: 80px auto 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+article p{
+  width: 450px;
+  position: absolute;
+  top: 15%;
+  right: 1%;
+}
+.spin {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  margin:-60px 0 0 -60px;
+  animation:spin 2000s linear infinite;
+}
+@keyframes spin { 
+  100% { 
+      transform:rotate(360deg); 
+  } 
+}
+#side {
+display: inline-block;
+width: 300px;
+position: absolute;
+left: 1%;
+top: 30%;
+margin: 0px;
+padding: 5px;
+}
+#primary{
+  margin-top: 200px;
+  width: 1000px;
+}
