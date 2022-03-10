@@ -8,8 +8,8 @@ I build an app with a direct and powerful purpose. It does all of the things tha
 
 ### Links and Resources
 
-- submission PR
-- Any Links you used as reference
+- https://fossheim.io/writing/posts/css-text-gradient/
+- https://stackoverflow.com/questions/13426875/text-border-using-css-border-around-text
 
 ### Reflections and Comments
 
