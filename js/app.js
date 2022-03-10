@@ -428,6 +428,7 @@ let storeArray = [
   new Store('Dubai', 11, 38, 3.7),
   new Store('Paris', 20, 38, 2.3),
   new Store('Lima', 2, 16, 4.6),
+  //new Store ('Banana Republic', 2, 3, 4),
 ];
 function constructHeader() {
   let blank = document.createElement('th');
