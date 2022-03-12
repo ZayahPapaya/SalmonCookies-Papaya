@@ -476,3 +476,35 @@ function constructFooter() {
   extraPog.textContent = `${grandTotal}`;
 }
 constructFooter();
+
+function footerReset() {
+  while (storeFoot.firstChild) {
+    storeFoot.removeChild(storeFoot.firstChild);
+  }
+  constructFooter();
+}
+
+let tableForm = document.getElementById("table_form");
+tableForm.addEventListener('submit', function (event) {
+  event.preventDefault();
+  console.log("Submitting ", event);
+  let form = event.target;
+  console.log(form);
+  let nameInput = form.nameInput;
+  let minInput = form.minInput;
+  console.log(minInput);
+  let maxInput = form.maxInput;
+  let averageInput = form.averageInput;
+  let addStore = new Store(nameInput.value, minInput.value, maxInput.value, averageInput.value);
+  storeArray.push(addStore);
+  addStore.saleAlg();
+  addStore.cookiesTotal();
+  addStore.construct();
+  footerReset();
+  //placeholder delete function
+
+  nameInput.value = "";
+  minInput.value = "";
+  maxInput.value = "";
+  averageInput.value = "";
+});
