@@ -394,7 +394,7 @@ Store.prototype.saleAlg = function () {
   for (let i = 0; i < hour.length; i++) {
     let customerThisHour = this.perCust();
     this.cphArr.push(customerThisHour);
-   //console.log(customerThisHour);
+    //console.log(customerThisHour);
   };
 };
 
@@ -404,19 +404,19 @@ Store.prototype.cookiesTotal = function () {
   return this.total;
 };
 
-Store.prototype.construct = function() {
+Store.prototype.construct = function () {
   let row = document.createElement('tr');
   storeTable.appendChild(row);
   // These are good ^
   let nameTag = document.createElement('td');
   row.appendChild(nameTag);
   nameTag.textContent = this.name;
-  for(let i = 0; i < hour.length; i++){
+  for (let i = 0; i < hour.length; i++) {
     let contentCount = this.cphArr[i];
     //console.log(contentCount);
     let contentConstruct = document.createElement('td');
     row.appendChild(contentConstruct);
-    contentConstruct.textContent =  contentCount;
+    contentConstruct.textContent = contentCount;
   }
   let totalContent = document.createElement('td');
   row.appendChild(totalContent);
@@ -434,17 +434,17 @@ function constructHeader() {
   let blank = document.createElement('th');
   storeHead.appendChild(blank);
   blank.textContent = "Salmon Cookies!";
-  for(let i = 0; i < hour.length; i++){
-  let thRow = document.createElement('th');
-  storeHead.appendChild(thRow);
-  thRow.textContent = `${hour[i]}:00`;
+  for (let i = 0; i < hour.length; i++) {
+    let thRow = document.createElement('th');
+    storeHead.appendChild(thRow);
+    thRow.textContent = `${hour[i]}:00`;
   }
   let blank2 = document.createElement('th')
   storeHead.appendChild(blank2);
   blank2.textContent = 'Total:';
 }
 constructHeader();
-for (let i = 0; i < storeArray.length; i++){
+for (let i = 0; i < storeArray.length; i++) {
   let test = storeArray[i];
   test.saleAlg();
   test.cookiesTotal();
@@ -458,9 +458,9 @@ function constructFooter() {
   totalFoot.textContent = 'Total:';
   let hold = [];
   let mathNumbers = 0;
-  for (let i = 0; i < hour.length; i++){
+  for (let i = 0; i < hour.length; i++) {
     mathNumbers = 0;
-    for (let k = 0; k < storeArray.length; k++){
+    for (let k = 0; k < storeArray.length; k++) {
       mathNumbers += storeArray[k].cphArr[i];
       //console.log(mathNumbers);
     }
