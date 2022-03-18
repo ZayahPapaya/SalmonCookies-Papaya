@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
-  font-family: 'Courier New', Courier, monospace;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color:blue;
 }
 
 ul {
@@ -18,4 +19,8 @@ table td, table th {
 }
 td:first-of-type{
   text-align: center;
+}
+fieldset {
+  color: violet;
+  background-color: blue;
 }

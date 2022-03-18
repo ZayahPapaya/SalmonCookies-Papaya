@@ -7,7 +7,25 @@
   <meta charset="UTF-8">
   <title>Salmon</title>
 </head>
+<!-- 
+A custom Google font for highlights
 
++ A specified standard sans-serif web font for data (such as Arial, Verdana, or Helvetica)
+
++ A specified standard serif web font for text (such as Georgia, Times, etc.)
+
++ Specified different font colors for all three font usages
+
++ A background color for the default page background (make sure font colors have good contrast and are readable on this background)
+
++ A different background color for elements such boxes and tables (so make sure the font colors contrast against this well, too!)
+
+Anything else you’d like to add related to style. But remember: simplicity, clarity, and consistency are good things in design.
+
+Be thoughtful about layout and overall organization of the page.
+
+Include all of the typical stuff that you’ll find on the home page of a business: locations, hours, phone number, email address, some text about how awesome the business is, etc. Be creative, and again, think about what is meaningful to a typical end user.
+ -->
 <body>
   <header>
     <a href="index.html">Home</a>
@@ -27,19 +45,22 @@
   <form id="table_form">
     <label>
       Name
-      <input name="nameInput"/>
+      <input name="nameInput" 
+      required="required"/>
     </label>
+    <fieldset>
     <label>
       Min
-      <input name="minInput" type="number"/>
+      <input name="minInput" type="number" required="required"/>
     </label>
     <label>
       Max
-      <input name="maxInput" type="number"/>
+      <input name="maxInput" type="number" required="required"/>
     </label>
+  </fieldset>
     <label>
       Average
-      <input name="averageInput" type="number"/>
+      <input name="averageInput" type="number" required="required"/>
     </label>
     <button id="submit">Submit</button>
   </form>

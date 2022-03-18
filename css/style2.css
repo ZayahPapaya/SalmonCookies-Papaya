@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: "Archivo Black", sans-serif;
+  font-family:Georgia, 'Times New Roman', Times, serif;
 }
 body {
   background-color: salmon;
@@ -52,6 +52,8 @@ article p{
   background-color: #333;
   padding: 5px;
   text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+  font-family: 'Inspiration', cursive;
+  color: lawngreen;
 }
 .spin {
   position: absolute;
