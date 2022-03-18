@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color:blue;
+}
+
+ul {
+margin: 20px;
+list-style: disc;
+}
+
+table {
+  border-spacing: -1px;
+}
+
+table td, table th {
+  border: thin black solid;
+  padding: 3px;
+}
+td:first-of-type{
+  text-align: center;
+}
+fieldset {
+  color: violet;
+  background-color: blue;
+}

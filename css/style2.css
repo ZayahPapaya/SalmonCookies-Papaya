@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+body {
+  background-color: salmon;
+}
+header {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+h1 {
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+}
+#chinook{
+  z-index: 1;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  transform: scale(80%);
+}
+p#chinook{
+  color: pink;
+  font-size: 50px;
+  text-align: center;
+  margin: 80px 180px 80px 80px;
+}
+a:visited{
+  color: pink;
+  text-decoration: none;
+}
+
+p {
+  font-size: 16px;
+}
+main {
+  background-color: #333;
+  width: 700px;
+  margin: 50px auto 0 auto;
+  display: flex;
+}
+article p{
+  width: 350px;
+  position: absolute;
+  top: 15%;
+  right: 1%;
+  background-color: #333;
+  padding: 5px;
+  text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+  font-family: 'Inspiration', cursive;
+  color: lawngreen;
+}
+.spin {
+  position: absolute;
+  top: 3%;
+  left: 0%;
+  width: 30%;
+  margin:-60px 0 0 -60px;
+  animation:spin 2000s linear infinite;
+}
+@keyframes spin { 
+  100% { 
+      transform:rotate(360deg); 
+  } 
+}
+#side {
+display: inline-block;
+width: 300px;
+position: absolute;
+left: 1%;
+top: 30%;
+margin: 0px;
+padding: 5px;
+}
+#primary{
+  margin-top: 100px;
+  width: 800px;
+  margin-left: 10%;
+  margin-right: 10%;
+  color: white;
+}
+.gradient-text {
+background-color:white;
+background-image: linear-gradient(90deg, red,orange,yellow,green,blue,indigo,violet);
+background-size: 100%;
+background-clip: content-box;
+-webkit-background-clip: text;
+ -webkit-text-fill-color: transparent; 
+}
