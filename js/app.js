@@ -387,7 +387,7 @@ Store.prototype.getRandomCustomers = function () {
 };
 
 Store.prototype.perCust = function () {
-  return Math.round(this.getRandomCustomers() * this.avg);
+  return Math.round(this.getRandomCustomers() * this.avg + 1);
 };
 
 Store.prototype.saleAlg = function () {
